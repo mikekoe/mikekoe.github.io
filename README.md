@@ -54,7 +54,8 @@ Task 2: Setting up Custom Domain for DigitalOcean droplet
 
 2. Click on **Add a Domain** and enter the necessary information required to create a domain.
 
-3. Click on **Create Records** and add the following information
+3. Click on **Create Records** and add the following information:
+### Information
 | Record Type | Hostname | Will direct to | TTL (seconds) |
 |-------------|----------|----------------|
 | A           |     @    | 45.55.177.156  | 3600 |
@@ -82,7 +83,7 @@ sudo chmod -R 755 /var/www/static-site
 ```
 
 8. On your local machine, upload your site files using **`rysnc`**
-```rsync -avz --delete static-site/ root@138.197.82.224:/var/www/static-site/
+```bash rsync -avz --delete static-site/ root@138.197.82.224:/var/www/static-site/
 ```
 
 9. Configure Nginx for your Domain
