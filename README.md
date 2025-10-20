@@ -83,7 +83,9 @@ sudo chmod -R 755 /var/www/static-site
 ```
 
 8. On your local machine, upload your site files using **rysnc**
-```bash rsync -avz --delete static-site/ root@138.197.82.224:/var/www/static-site/```
+```bash 
+rsync -avz --delete static-site/ root@138.197.82.224:/var/www/static-site/
+```
 
 9. Configure Nginx for your Domain
 ```bash
