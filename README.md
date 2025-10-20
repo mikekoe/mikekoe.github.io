@@ -57,9 +57,9 @@ Task 2: Setting up Custom Domain for DigitalOcean droplet
 3. Click on **Create Records** and add the following information:
 ### Information
 | Record Type | Hostname | Will direct to | TTL (seconds) |
-|-------------|----------|----------------|
-| A           |     @    | 45.55.177.156  | 3600 |
-| A           |    www   | 45.55.177.156  | 3600 |
+|-------------|----------|----------------|---------------|
+| A | @ | 45.55.177.156 | 3600 |
+| A | www | 45.55.177.156 | 3600 |
 
 4. SSH into the remote server (Digitalocean) using
    ```ssh -i <key-pair> root@SERVER-IP```
@@ -82,9 +82,8 @@ sudo chown -R $USER:$USER /var/www/static-site
 sudo chmod -R 755 /var/www/static-site
 ```
 
-8. On your local machine, upload your site files using **`rysnc`**
-```bash rsync -avz --delete static-site/ root@138.197.82.224:/var/www/static-site/
-```
+8. On your local machine, upload your site files using **rysnc**
+```bash rsync -avz --delete static-site/ root@138.197.82.224:/var/www/static-site/```
 
 9. Configure Nginx for your Domain
 ```bash
